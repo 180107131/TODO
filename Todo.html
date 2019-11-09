@@ -29,10 +29,10 @@ button:hover {
   background: #359583;
   box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
 }
-#back{
+#backk{
   position: absolute;
   width: 100%;
-  height:100%;
+  height: 100%;
   z-index: -1;
 }
 header a{
@@ -41,7 +41,7 @@ header a{
   color: #737373;
   font-size: 14px;
   padding-left: 0px;
-  margin: 0 5 0 5;
+  margin:0 5 0 5;
 }
 #logo img{
   position: relative;
@@ -62,7 +62,125 @@ header a1{
   height: 12px;
   margin-right: 10px;
 }
-                    
+#spoiler{
+ display: none;
+ position: absolute;
+ background: white;
+color: #757475;
+top: 70px;
+right: 0px;
+width: 500px;
+height: 100%;
+display: none;
+z-index: 4;
+}
+#Dash{
+  padding-top: 30px;
+  padding-left: 35px;
+}
+button{
+  background-color: white;
+  background-repeat: no-repeat;
+  border: none;
+  z-index: 3;
+}
+table{
+  z-index: 5;
+  position: absolute;
+  left: 250px;
+  top: 50px;
+color:#585758;
+border-collapse: collapse;
+}
+td{
+  padding: 10px;
+  padding-left: 70px;
+  padding-right: 50px;
+  border: solid #9e9c9e 1px;
+  border-left: none;
+  border-right: none;
+  border-top: none;
+}
+tr:hover{
+  background: #d0d0d0;
+}
+#act{
+  padding-left: 50px;
+}
+#page1{
+  position: absolute;
+  background: white;
+color: #757475;
+right: 0;
+top: 0;
+width: 350px;
+height: 100%;
+display: none;
+}
+#page2{
+  position: absolute;
+  background: white;
+color: #757475;
+right: 0;
+top: 0;
+width: 350px;
+height: 100%;
+display: none;
+}
+#page3{
+  position: absolute;
+  background: white;
+color: #757475;
+right: 0;
+top: 0;
+width: 350px;
+height: 100%;
+display: none;
+}
+form{
+  text-align: center;
+  margin-top: 100px;
+  margin-left: 50px;
+  margin-right: 50px;
+}
+tr{
+  border: solid #9e9c9e 1px;
+}
+#adduser{
+  background-color: #8712da;
+  background-repeat: no-repeat;
+  border: none;
+  color: white;
+  width: 50%;
+}
+#addus{
+  background-color: #8712da;
+  background-repeat: no-repeat;
+  border: none;
+  color: white;
+  margin-left: 1200px;
+  width: 70;
+}
+form input{
+  width: 100%;
+  margin-right: 400px;
+}
+#line{
+  display: block;
+  height: 0.1px;
+  opacity: 0.5;
+  width: 90%;
+}
+#Micrsoft{
+  color: #848080;
+}
+#Mydayadd{
+  height: 200px;
+}
+select{
+  text-align: left;
+  width: 100%;
+}
 </style>
 <body>
   <img src="https://images.unsplash.com/photo-1536882240095-0379873feb4e?ixlib=rb-1.2.1&auto=format&fit=crop&w=1051&q=80" alt="back" id="backk">
@@ -72,9 +190,9 @@ header a1{
   <div class="menu">
     <a id = "Micrsoft">Micrsoft To-do</a>
     <p id = "avatar"><img id ="ava" src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/2f14dc1a-0d36-4e88-a651-097b305084fc/d2ratcy-85ea46ba-ccb4-4d52-b378-78067dae11b8.jpg/v1/fill/w_900,h_901,q_75,strp/retro_mini_avatar_by_patrickmolaer_d2ratcy-fullview.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9OTAxIiwicGF0aCI6IlwvZlwvMmYxNGRjMWEtMGQzNi00ZTg4LWE2NTEtMDk3YjMwNTA4NGZjXC9kMnJhdGN5LTg1ZWE0NmJhLWNjYjQtNGQ1Mi1iMzc4LTc4MDY3ZGFlMTFiOC5qcGciLCJ3aWR0aCI6Ijw9OTAwIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmltYWdlLm9wZXJhdGlvbnMiXX0.vTjrF33SqRAhbhelkJ2nqJWzNn1vXLlqMvV-jVQBdkM" alt="">User</p>
-    <button id="#">My day</button>
-    <button id="#">Important</button>
-    <button id="#">Planned</button>
+    <button id="Myday" onclick="Clicked1()">My day</button>
+    <button id="Important" onclick="Clicked2()">Important</button>
+    <button id="Planned" onclick="Clicked3()">Planned</button>
     <button id="#">Flagged Email</button>
     <button id="#">Tasks</button>
     <hr id = "line"></hr>
@@ -82,38 +200,110 @@ header a1{
     <button id="#">Untitled list</button>
     <button id="#">+ New list</button>
   </div>
-  <p id = "Dash"> Dashboard users</p>
-  <button id = "addus" onclick = "Clicked()"> Add user</button>
-  <div id = "page">
-  <form action = "javascript:void(0);" method = "POST" onsubmit ="app.Add()">
+  <p id="Dash">Dashboard users</p>
+  <div id = "page1">
+  <form action="javascript:void(0);" method="POST" onsubmit="app.Add()">
     <h>Add new user:</h>
       <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-    <input type = "text" id = "add-name" placeholder = "Name">
-    <input type = "text" id = "add-email" placeholder = "Email">
-    <input type = "text" id = "add-phone" placeholder = "Phone">
-    
-    
+   <input type="text" id="Mydayadd" placeholder="Add thing to do today">
+ </select>
+   <input id = "adduser" type="submit" value="Add new user">
+  </form>
+</div>
+<div id = "page2">
+<form action="javascript:void(0);" method="POST" onsubmit="app.Add()">
+  <h></h>
+ <input type="text" id="Mydayadd" placeholder="Add thing to do today">
+</select>
+ <input id = "adduser" type="submit" value="Add new user">
+</form>
+</div>
+  <p id="counter"></p>
+<table>
+ <td id="countries">
+   <tr><input type="checkbox" name="check" value="">Add new note</tr>
+</td>
+</table>
+<div id="spoiler" role="aria-hidden">
+ <form action="javascript:void(0);" method="POST" id="saveEdit">
+ <input type="text" id="edit-name">
+ <input type="submit" value="Edit" /> <a onclick="CloseInput()" aria-label="Close">&#10006;</a>
+ </form>
+</div>
+</div>
 <script>
-  var app = new function(){
-    this.el = document.getElementbyId('countries');
-    this.el1 = document.getElementById("Username")
-    this.el2 = document.getElementById("Email")
-    this.el3 = document.getElementById("Admin")
-    this.countries = ['Active', 'Inactive', 'Active', 'Active', 'Inactive', 'Inactive', 'Active'];
-    this.names =['User Surname', 'User Surname', 'User Surname', 'User Surname', 'User Surname', 'User Surname', 'User Surname'];
-    this.emails = ['user@user.com', 'user@user.com', 'user@user.com', 'user@user.com', 'user@user.com', 'user@user.com', 'user@user.com'];
-    this.accounts = ["Admin","Semi Admin","Master Admin","Semi Admin","User","Semi Admin","User"];
-    this.Count = function(data) {
-      var el = document.getElementById('counter');
-      var name = 'User';
-      if (data) {
-        if (data > 1) {
-          name = 'Users';
-        }
-        el.innerHTML = data + ' ' + name ;
-      } else {
-        el.innerHTML = 'No ' + name;
-        }
-      };
+var app = new function() {
+  this.el = document.getElementById('countries');
+  this.el1 = document.getElementById("UserName")
+  this.el2 = document.getElementById("Email")
+  this.el3 = document.getElementById("Admin")
+  this.countries = [];
+  this.Count = function(data) {
+    var el = document.getElementById('counter');
+    var name = 'User';
+    if (data) {
+      if (data > 1) {
+        name = 'Users';
+      }
+      el.innerHTML = data + ' ' + name ;
+    } else {
+      el.innerHTML = 'No ' + name;
+    }
+  };
+  this.FetchAll = function() {
+    var data = '';
+    var l = document.getElementById("email")
+    var k = document.getElementById("phone")
+    var j = document.getElementById("admin")
+    if (this.countries.length > 0) {
+      for (i = 0; i < this.countries.length; i++) {
+        data += '<tr id = "uss">';
+        data += '<td>' + this.countries[i] + '</td>';
+        data += '<td><button onclick="app.Delete(' + i + ')" ><img src = "delete.jpg" width = "15px" height = "15px"></button>'+'<button onclick="app.Edit(' + i + ')" ><img src = "edit.png" width = "15px" height = "15px"></button></td>';
+        data += '</tr>';
+      }
+    }
+    this.Count(this.countries.length);
+    return this.el.innerHTML = data;
+  };
+  this.Add = function () {
+    el = document.getElementById('add-name');
+    el1 = document.getElementById('add-email');
+    el2 = document.getElementById('add-phone');
+    el3 = document.getElementById("add-admin")
+    // Get the value
+    var country = el.value;
+    if (country) {
+      // Add the new value
+      this.countries.push(country.trim());
+      // Reset input value
+      el.value = '';
+      // Dislay the new list
+      this.FetchAll();
+    }
+    var name = el1.value;
+    if(name){
+      this.names.push(name.trim());
+      el1.value = '';
+      this.FetchAll();
+    }
+  };
+
+}
+app.FetchAll();
+function CloseInput() {
+  document.getElementById('spoiler').style.display = 'none';
+}
+function Clicked1(){
+  document.getElementById('page1').style.display = "block";
+}
+function Clicked2(){
+  document.getElementById('page2').style.display = "block";
+}
+function Clicked3(){
+  document.getElementById('page3').style.display = "block";
+}
+app.FetchAll();
+</script>
 </body>
- </html>
+</html>
