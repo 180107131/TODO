@@ -93,6 +93,27 @@ header a1{
     <input type = "text" id = "add-phone" placeholder = "Phone">
     
     
-    
+<script>
+  var app = new function(){
+    this.el = document.getElementbyId('countries');
+    this.el1 = document.getElementById("Username")
+    this.el2 = document.getElementById("Email")
+    this.el3 = document.getElementById("Admin")
+    this.countries = ['Active', 'Inactive', 'Active', 'Active', 'Inactive', 'Inactive', 'Active'];
+    this.names =['User Surname', 'User Surname', 'User Surname', 'User Surname', 'User Surname', 'User Surname', 'User Surname'];
+    this.emails = ['user@user.com', 'user@user.com', 'user@user.com', 'user@user.com', 'user@user.com', 'user@user.com', 'user@user.com'];
+    this.accounts = ["Admin","Semi Admin","Master Admin","Semi Admin","User","Semi Admin","User"];
+    this.Count = function(data) {
+      var el = document.getElementById('counter');
+      var name = 'User';
+      if (data) {
+        if (data > 1) {
+          name = 'Users';
+        }
+        el.innerHTML = data + ' ' + name ;
+      } else {
+        el.innerHTML = 'No ' + name;
+        }
+      };
 </body>
  </html>
