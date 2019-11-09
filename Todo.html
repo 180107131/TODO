@@ -203,19 +203,29 @@ select{
   <p id="Dash">Dashboard users</p>
   <div id = "page1">
   <form action="javascript:void(0);" method="POST" onsubmit="app.Add()">
-    <h>Add new user:</h>
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-   <input type="text" id="Mydayadd" placeholder="Add thing to do today">
+    <h>My day</h>
+      <p>You can add what do you want to do today</p>
+    <input type="text" id="Mydayadd" placeholder="Add thing to do today">
  </select>
-   <input id = "adduser" type="submit" value="Add new user">
+   <input id = "adduser" type="submit" value="Add">
   </form>
 </div>
 <div id = "page2">
 <form action="javascript:void(0);" method="POST" onsubmit="app.Add()">
-  <h></h>
+  <h>Important</h>
+  <p>You can add what do you want to do today</p>
  <input type="text" id="Mydayadd" placeholder="Add thing to do today">
 </select>
- <input id = "adduser" type="submit" value="Add new user">
+ <input id = "adduser" type="submit" value="Add">
+</form>
+</div>
+<div id = "page3">
+<form action="javascript:void(0);" method="POST" onsubmit="app.Add()">
+  <h>Add your planned note:</h>
+<p>You can add what do you want to plan</p>
+ <input type="text" id="Mydayadd" placeholder="Add thing to do today">
+</select>
+ <input id = "adduser" type="submit" value="Add">
 </form>
 </div>
   <p id="counter"></p>
@@ -224,13 +234,7 @@ select{
    <tr><input type="checkbox" name="check" value="">Add new note</tr>
 </td>
 </table>
-<div id="spoiler" role="aria-hidden">
- <form action="javascript:void(0);" method="POST" id="saveEdit">
- <input type="text" id="edit-name">
- <input type="submit" value="Edit" /> <a onclick="CloseInput()" aria-label="Close">&#10006;</a>
- </form>
-</div>
-</div>
+   
 <script>
 var app = new function() {
   this.el = document.getElementById('countries');
